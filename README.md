@@ -65,19 +65,11 @@ Most churn models stop at a probability score. The business question isn't "will
 ## File Structure
 
 ```
-customer-churn-prediction/
-├── data/               # Raw and processed data (gitignored if sensitive)
-├── notebooks/
-│   ├── 01_eda.ipynb            # Exploratory data analysis
-│   ├── 02_feature_engineering.ipynb
-│   └── 03_modelling.ipynb      # Model training and evaluation
-├── src/
-│   ├── preprocess.py
-│   ├── train.py
-│   └── evaluate.py
-├── outputs/
-│   └── churn_drivers_retention_map.csv
-├── requirements.txt
+ustomer-churn-prediction/
+├── generate_data.py    # Generates synthetic customer behavioural data
+├── preprocess.py       # Cleans, encodes, and engineers features
+├── train.py            # Trains and saves the classification model
+├── evaluate.py         # Evaluates model performance and feature importance
 └── README.md
 ```
 
@@ -85,16 +77,22 @@ customer-churn-prediction/
 
 ## How to Run
 
-```bash
+```
 # Clone the repo
-git clone https://github.com/your-username/customer-churn-prediction.git
+git clone https://github.com/simranksandhu0/customer-churn-prediction.git
 cd customer-churn-prediction
 
-# Install dependencies
-pip install -r requirements.txt
+# Generate synthetic data
+python generate_data.py
 
-# Run the modelling notebook
-jupyter notebook notebooks/03_modelling.ipynb
+# Preprocess the data
+python preprocess.py
+
+# Train the model
+python train.py
+
+# Evaluate and view results
+python evaluate.py
 ```
 
 ---
