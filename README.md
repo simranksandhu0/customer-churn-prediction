@@ -65,7 +65,7 @@ Most churn models stop at a probability score. The business question isn't "will
 ## File Structure
 
 ```
-ustomer-churn-prediction/
+customer-churn-prediction/
 ├── generate_data.py    # Generates synthetic customer behavioural data
 ├── preprocess.py       # Cleans, encodes, and engineers features
 ├── train.py            # Trains and saves the classification model
